@@ -16,7 +16,7 @@ const roles = ref([
 // Watch for changes to selectedRole and navigate
 watch(selectedRole, (newVal) => {
   if (newVal) {
-    router.push('/domain')
+    router.push('/client_type')
   }
 })
 </script>
@@ -44,10 +44,9 @@ watch(selectedRole, (newVal) => {
         </v-container>
 
         <v-container>
-          <v-row >
-            
-            <v-col cols="12" md="6" class=" mx-auto">
-              <v-card class="mx-auto" >
+          <v-row>
+            <v-col cols="12" md="6" class="mx-auto">
+              <v-card class="mx-auto">
                 <template v-slot:title>
                   <span class="d-flex justify-center text-center font-weight-medium"
                     >Welcome, let's set you up !
@@ -56,7 +55,7 @@ watch(selectedRole, (newVal) => {
 
                 <v-card-text class="bg-surface-light pt-4">
                   <v-container class="d-flex flex-column align-center justify-center">
-                    <v-card width="350" class="pa-2" >
+                    <v-card width="350" class="pa-2">
                       <v-select
                         v-model="selectedRole"
                         :items="roles"
@@ -71,7 +70,6 @@ watch(selectedRole, (newVal) => {
                 </v-card-text>
               </v-card>
             </v-col>
-           
           </v-row>
         </v-container>
       </v-main>
