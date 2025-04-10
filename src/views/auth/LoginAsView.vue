@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const selectedRole = ref(null)
-
+const selectedClientType = ref(null)
 
 const roles = ref([
   { title: 'Client', value: 'client' },
@@ -15,16 +15,10 @@ const roles = ref([
 
 // Watch for changes to selectedRole and navigate
 watch(selectedRole, (newVal) => {
-  if (newVal === 'client') {
-    router.push('/client_login')
-  } else if (newVal === 'staffer') {
-    router.push('/staffer_login')
-  } else if (newVal === 'admin') {
-    router.push('/admin_login')
+  if (newVal) {
+    router.push('/client_type')
   }
 })
-
-
 </script>
 
 <template>
