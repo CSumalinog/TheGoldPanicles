@@ -3,7 +3,7 @@
 <template>
   <v-responsive>
     <v-app>
-      <v-main class="bg-cover bg-center" style="background-image: url('/images/bg_image.png')">
+      <v-main class="bg-cover bg-center" style="background-image: url('')">
         <v-container>
           <v-row>
             <v-col cols="12" md="6" class="mx-auto text-center pt-16">

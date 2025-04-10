@@ -15,8 +15,10 @@ const roles = ref([
 
 // Watch for changes to selectedRole and navigate
 watch(selectedRole, (newVal) => {
-  if (newVal) {
+  if (newVal === 'client') {
     router.push('/client_type')
+  } else if (newVal === 'staffer' || newVal === 'admin') {
+    router.push('/login')
   }
 })
 </script>
@@ -24,7 +26,7 @@ watch(selectedRole, (newVal) => {
 <template>
   <v-responsive>
     <v-app>
-      <v-main class="bg-cover bg-center" style="background-image: url('/images/bg_image.png')">
+      <v-main class="bg-cover bg-center" style="background-image: url('')">
         <v-container>
           <v-row>
             <v-col cols="12" md="6" class="mx-auto text-center pt-16">

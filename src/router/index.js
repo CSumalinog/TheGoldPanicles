@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LandingView from '@/views/auth/LandingView.vue'
 import LoginAsView from '@/views/auth/LoginAsView.vue'
 import ClientTypeView from '@/views/auth/ClienTypeView.vue'
+import LoginView from '@/views/auth/LoginView.vue'
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,6 +27,14 @@ const router = createRouter({
       name: 'ClientType',
       component: ClientTypeView,
     },
+
+    {
+      path: '/login',
+      name: 'LoginView',
+      component: LoginView,
+    },
+
+  
   ],
 })
 
