@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const selectedRole = ref(null)
-const selectedClientType = ref(null)
+
 
 const roles = ref([
   { title: 'Client', value: 'client' },
@@ -21,6 +21,7 @@ watch(selectedRole, (newVal) => {
     router.push('/login')
   }
 })
+
 </script>
 
 <template>

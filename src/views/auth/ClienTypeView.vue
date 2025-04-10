@@ -23,7 +23,7 @@
         </v-container>
       </v-main>
 
-      <v-footer class="d-flex justify-center text-center"color="amber-darken-2" border app>
+      <v-footer class="d-flex justify-center text-center" color="amber-darken-2" border app>
         © 2025 - TGP | All Rights Reserved
       </v-footer>
     </v-app>

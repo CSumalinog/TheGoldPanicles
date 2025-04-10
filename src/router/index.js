@@ -4,8 +4,6 @@ import LoginAsView from '@/views/auth/LoginAsView.vue'
 import ClientTypeView from '@/views/auth/ClienTypeView.vue'
 import LoginView from '@/views/auth/LoginView.vue'
 
-
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -21,21 +19,22 @@ const router = createRouter({
       component: LoginAsView,
     },
 
-
     {
       path: '/client_type',
-      name: 'ClientType',
+      name: 'ClientTypeView',
       component: ClientTypeView,
     },
 
     {
       path: '/login',
-      name: 'LoginView',
+      name: 'Login',
       component: LoginView,
     },
 
-  
+    
   ],
 })
 
+
 export default router
+
