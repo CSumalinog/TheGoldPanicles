@@ -13,12 +13,9 @@ const roles = ref([
   { title: 'Admin', value: 'admin' },
 ])
 
-// Watch for changes to selectedRole and navigate
 watch(selectedRole, (newVal) => {
-  if (newVal === 'client') {
+  if (newVal) {
     router.push('/client_type')
-  } else if (newVal === 'staffer' || newVal === 'admin') {
-    router.push('/login')
   }
 })
 
@@ -49,7 +46,8 @@ watch(selectedRole, (newVal) => {
         <v-container>
           <v-row>
             <v-col cols="12" md="6" class="mx-auto">
-              <v-card class="mx-auto">
+
+              <v-card class="mx-auto" width="400">
                 <template v-slot:title>
                   <span class="d-flex justify-center text-center font-weight-medium"
                     >Welcome, let's set you up !
