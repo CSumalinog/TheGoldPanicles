@@ -59,16 +59,12 @@ const facebookLogin = async () => {
           </v-row>
         </v-container>
 
-        <v-card class="mx-auto" width="400">
+        <v-card class="mx-auto" width="350" color="amber-darken-1">
           <template v-slot:title>
             <span class="font-weight-black">Welcome to Vuetify</span>
           </template>
 
-          <v-container
-            class="fill-height d-flex align-center justify-center"
-            fluid
-            style="background-color: #fce488"
-          >
+          <v-container>
             <v-sheet class="pa-6" elevation="0" max-width="400" width="100%">
               <v-form @submit.prevent="submit">
                 <v-text-field
@@ -92,27 +88,41 @@ const facebookLogin = async () => {
 
                 <v-row class="justify-center mb-3">
                   <v-col cols="6" class="d-flex justify-end">
-                    <v-btn
-                      width="56"
-                      height="56"
-                      class="rounded-circle elevation-3"
-                      color="yellow-darken-2"
+                    <div
+                      style="
+                        width: 56px;
+                        height: 56px;
+                        background-color: #fdd835;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                        cursor: pointer;
+                      "
                       @click="googleLogin"
                     >
                       <v-icon size="28" color="black">mdi-google</v-icon>
-                    </v-btn>
+                    </div>
                   </v-col>
 
                   <v-col cols="6" class="d-flex justify-start">
-                    <v-btn
-                      width="56"
-                      height="56"
-                      class="rounded-circle elevation-3"
-                      color="blue-darken-4"
+                    <div
+                      style="
+                        width: 56px;
+                        height: 56px;
+                        background-color: #0d47a1;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                        cursor: pointer;
+                      "
                       @click="facebookLogin"
                     >
                       <v-icon size="28" color="white">mdi-facebook</v-icon>
-                    </v-btn>
+                    </div>
                   </v-col>
                 </v-row>
               </v-form>

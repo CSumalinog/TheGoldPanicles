@@ -6,7 +6,6 @@ const router = useRouter()
 
 const selectedRole = ref(null)
 
-
 const roles = ref([
   { title: 'Client', value: 'client' },
   { title: 'Staffer', value: 'staffer' },
@@ -14,11 +13,12 @@ const roles = ref([
 ])
 
 watch(selectedRole, (newVal) => {
-  if (newVal) {
-    router.push('/client_type')
+  if (newVal === 'client') {
+    router.push('/login_client')
+  } else if (newVal === 'staffer' || newVal === 'admin') {
+    router.push('/login')
   }
 })
-
 </script>
 
 <template>
@@ -46,25 +46,22 @@ watch(selectedRole, (newVal) => {
         <v-container>
           <v-row>
             <v-col cols="12" md="6" class="mx-auto">
-
-              <v-card class="mx-auto" width="400">
+              <v-card class="mx-auto" width="350">
                 <template v-slot:title>
                   <span class="d-flex justify-center text-center font-weight-medium"
                     >Welcome, let's set you up !
                   </span>
                 </template>
 
-                <v-card-text class="bg-surface-light pt-4">
+                <v-card-text class="bg-surface-light">
                   <v-container class="d-flex flex-column align-center justify-center">
-                    <v-card width="350" class="pa-2">
+                    <v-card width="300" class="pa-2">
                       <v-select
                         v-model="selectedRole"
                         :items="roles"
                         item-title="title"
                         item-value="value"
                         label="Login as"
-                        outlined
-                        class="mb-4"
                       />
                     </v-card>
                   </v-container>
