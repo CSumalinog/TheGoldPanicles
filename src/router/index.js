@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LandingView from '@/views/auth/LandingView.vue'
 import LoginAsView from '@/views/auth/LoginAsView.vue'
-import ClientLoginView from '@/views/auth/ClientLoginView.vue'
-import AdminLoginView from '@/views/auth/AdminLoginView.vue'
 import StafferLoginView from '@/views/auth/StafferLoginView.vue'
 import StafferSignupView from '@/views/auth/StafferSignupView.vue'
 
 
+import LoginClientView from '@/views/auth/LoginClientView.vue'
+import LoginView from '@/views/auth/LoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,15 +24,15 @@ const router = createRouter({
     },
 
     {
-      path: '/client_login',
-      name: 'ClientLogin',
-      component: ClientLoginView,
+      path: '/login_client',
+      name: 'LoginClient',
+      component: LoginClientView,
     },
 
     {
-      path: '/admin_login',
-      name: 'AdminLogin',
-      component: AdminLoginView,
+      path: '/login',
+      name: 'Login',
+      component: LoginView,
     },
 
     {
@@ -46,6 +46,7 @@ const router = createRouter({
       name: 'StafferSignup',
       component: StafferSignupView,
     }
+
   ],
 })
 
