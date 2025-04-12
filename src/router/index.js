@@ -4,6 +4,7 @@ import LoginAsView from '@/views/auth/LoginAsView.vue'
 import ClientLoginView from '@/views/auth/ClientLoginView.vue'
 import AdminLoginView from '@/views/auth/AdminLoginView.vue'
 import StafferLoginView from '@/views/auth/StafferLoginView.vue'
+import StafferSignupView from '@/views/auth/StafferSignupView.vue'
 
 
 
@@ -38,6 +39,12 @@ const router = createRouter({
       path: '/staffer_login',
       name: 'StafferLogin',
       component: StafferLoginView,
+    },
+
+    {
+      path: '/staffer_signup',
+      name: 'StafferSignup',
+      component: StafferSignupView,
     }
   ],
 })
